@@ -1,1 +1,4 @@
-01010110010011
+;  COMMENT;
+0; func0;
+1; func1;
+ ; push;

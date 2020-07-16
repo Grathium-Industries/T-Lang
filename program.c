@@ -6,11 +6,14 @@
 	./Tlang [program name]
 */
 
-
 void func0() {
 	/* Code */
 }
 
 void func1() {
+	/* Code */
+}
+
+void push() {
 	/* Code */
 }
