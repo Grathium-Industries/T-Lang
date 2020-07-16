@@ -17,12 +17,18 @@ int main(int argc, const char *argv[])
 		if (commenting == true) continue;
 
 		// binary string reader
-		if (ch == '0') {
-			func0();
-		} else if (ch == '1') {
-			func1();
-		} else if (ch == ' ') {
-			push();
+		switch (ch) {		
+			case '0':
+				func0();
+				break;
+
+			case '1':
+				func1();
+				break;
+
+			case ' ':
+				push();
+				break;
 		}
 	}
 
