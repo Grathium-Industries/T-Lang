@@ -16,7 +16,7 @@ int main(int argc, const char *argv[])
 		if (ch == ';') commenting = !commenting;
 		if (commenting == true) continue;
 
-		// binary string reader
+		// string reader
 		switch (ch) {		
 			case '0':
 				func0();
@@ -28,6 +28,10 @@ int main(int argc, const char *argv[])
 
 			case ' ':
 				push();
+				break;
+			
+			case '$':
+				exit(0);
 				break;
 		}
 	}
