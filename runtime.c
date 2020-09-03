@@ -13,7 +13,12 @@ bool pointer(const char *programFile)
 	bool commenting = false;
 	filePointer = fopen(programFile, "r");
 
-	// readfile and call corrosponding code block
+	// global variables
+	// these variables can be transmitted between functions
+	int currentRegister = 0;
+	int currentState = 0;
+
+	// readfile and call corresponding code block
 	while ((ch = fgetc(filePointer)) != EOF) {
 
 		// comments code blocking
@@ -23,21 +28,22 @@ bool pointer(const char *programFile)
 
 		/* POINTER */
 		// checks currently reading char
-		// then calls corrosponding code block
+		// then calls corresponding code block
+		// code blocks return the state of the program
 		switch (ch) {
 			// false or '0' code block
 			case '0':
-				func0();
+				currentState = func0(currentRegister, currentState);
 				break;
 
 			// true OR '1' code block
 			case '1':
-				func1();
+				currentState = func1(currentRegister, currentState);
 				break;
 
 			// push calling code block
 			case '.':
-				push();
+				currentState = push(currentRegister, currentState);
 				break;
 			
 			// exit program code block
@@ -48,6 +54,8 @@ bool pointer(const char *programFile)
 				return true;
 				break;
 		}
+
+		currentRegister++;
 	}
 
 	// close program file
