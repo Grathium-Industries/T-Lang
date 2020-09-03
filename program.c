@@ -7,19 +7,19 @@
 */
 
 // called when pointer reads '0'
-int func0() {
+int func0(reg, state) {
 	/* Code */
 	return 0; // update current state of program
 }
 
 // called when pointer reads '1'
-int func1() {
+int func1(reg, state) {
 	/* Code */
 	return 0; // update current state of program
 }
 
 // called when pointer reads ' ' or {SPACE}
-int push() {
+int push(reg, state) {
 	/* Code */
 	return 0; // update current state of program
 }
