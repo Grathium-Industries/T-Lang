@@ -2,7 +2,7 @@
 appName : T-Lang
 description : T-Lang, developed upon Turing Machine principles...
 author : Grathium Industries
-version : 1.0
+version : 1.1
 license : GNU General Public License 3.0
 
 # bundler info
